@@ -47,7 +47,7 @@ const BookService = () => {
     <div>
       <div className="card-body border rounded m-8">
         <h1 className="text-3xl font-semibold text-center my-4">
-         Title: {title}
+          Title: {title}
         </h1>
         <form onSubmit={handleBookService}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -60,13 +60,19 @@ const BookService = () => {
                 defaultValue={user?.displayName}
                 name="name"
                 className="input input-bordered"
+                required
               />
             </div>
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Date</span>
               </label>
-              <input type="date" name="date" className="input input-bordered" />
+              <input
+                type="date"
+                name="date"
+                className="input input-bordered"
+                required
+              />
             </div>
             <div className="form-control">
               <label className="label">
@@ -89,6 +95,7 @@ const BookService = () => {
                 type="text"
                 defaultValue={"$" + price}
                 className="input input-bordered"
+                required
               />
             </div>
           </div>
